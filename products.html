@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - A2AI Creations</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/products.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="a2aiIcon.png" type="image/x-icon">
+
+</head>
+
+<body>
+    <header id="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">A2AI Creations</a>
+            </div>
+            <nav>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html" class="active">Products</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="breadcrumb">
+        <div class="container">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li>Products</li>
+            </ul>
+        </div>
+    </div>
+
+    <main>
+        <section class="products-section">
+            <div class="container">
+                <h1>Our Collection</h1>
+                <p class="section-description">Discover our beautiful Maa Saraswati statues, each crafted with devotion
+                    and attention to detail.</p>
+
+                <div class="product-container">
+                    <div class="product-card">
+                        <div class="product-image-gallery">
+                            <!-- Main Display Image -->
+                            <img id="main-image" src="./images/saraswati maa.jpg"
+                                alt="White Marble Maa Saraswati Statue" style="border-radius: 10px;">
+
+                            <!-- Thumbnail Images -->
+                            <div class="thumbnail-images">
+                                <img src="./images/saraswati maa.jpg" alt="Thumb 1" class="thumbnail active">
+                                <img src="./images/saraswati maa photo.jpg" alt="Thumb 1" class="thumbnail active">
+                                <img src="./images/Sarswatim maa 1.jpg" alt="Thumb 2" class="thumbnail">
+                                <img src="./images/Sarswatim maa 2.jpg" alt="Thumb 3" class="thumbnail">
+                                <img src="./images/Sarswatim maa 3.jpg" alt="Thumb 4" class="thumbnail">
+                                <img src="./images/Sarswatim maa 4.jpg" alt="Thumb 4" class="thumbnail">
+                                <img src="./images/Sarswatim maa 5.jpg" alt="Thumb 4" class="thumbnail">
+                            </div>
+                        </div>
+
+                        <div class="product-info">
+                            <h2>White POP Maa Saraswati Statue</h2>
+                            <p class="product-description">This beautifully crafted statue is made from high-quality
+                                Plaster of Paris (POP), showcasing Maa Saraswati, the revered goddess of knowledge,
+                                music, arts, and wisdom. She is depicted in her traditional pose with the veena,
+                                radiating grace and divinity.</p>
+                            <ul class="product-features">
+                                <li>Height: 22.4 inches</li>
+                                <li>Width: 16.5 inches</li>
+                                <li>Material: Premium Plaster of Paris (POP)</li>
+                                <li>Handcrafted by skilled artisans</li>
+                                <li>Detailed carving and finishing</li>
+                            </ul>
+                            <p class="product-price">₹2,200 <span style="text-decoration: line-through;">₹3,500</span>
+                                <span style="color: red;font-size: 0.8rem;font-weight: bold;"> 37% Off</span>
+                            </p>
+                            <button class="btn btn-primary buy-now-btn" data-product="White Marble Maa Saraswati Statue"
+                                data-price="₹2,200">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>A2AI Creations</h3>
+                    <p>Bringing divinity to your home</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <p>
+                        <a href="https://wa.me/917623853955" target="_blank" class="whatsapp-link">
+                            <span class="whatsapp-icon"><i class="fa-brands fa-whatsapp"></i></span> +91 76238 53955
+                        </a>
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 A2AI Creations. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
+
+    <script src="js/script.js"></script>
+    <script src="js/products.js"></script>
+    <script>
+        const thumbnails = document.querySelectorAll('.thumbnail');
+        const mainImage = document.getElementById('main-image');
+
+        thumbnails.forEach(thumb => {
+            thumb.addEventListener('click', function () {
+                // Change main image src
+                mainImage.src = this.src;
+
+                // Remove active class from all thumbnails
+                thumbnails.forEach(t => t.classList.remove('active'));
+
+                // Add active class to clicked thumbnail
+                this.classList.add('active');
+            });
+        });
+    </script>
+
+</body>
+
+</html>
